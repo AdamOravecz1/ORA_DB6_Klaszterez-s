@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # 'control_vehicle = klaszterezes.control_vehicle:main',
+            'lidar_subscriber = klaszterezes.lidar_subscriber:main',  # Itt add hozzá a node-ot
         ],
     },
 )

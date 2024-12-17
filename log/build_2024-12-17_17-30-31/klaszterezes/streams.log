@@ -1,0 +1,20 @@
+[3.467s] Invoking command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data
+[5.337s] running develop
+[6.611s] running egg_info
+[6.611s] writing klaszterezes.egg-info/PKG-INFO
+[6.612s] writing dependency_links to klaszterezes.egg-info/dependency_links.txt
+[6.614s] writing entry points to klaszterezes.egg-info/entry_points.txt
+[6.620s] writing requirements to klaszterezes.egg-info/requires.txt
+[6.621s] writing top-level names to klaszterezes.egg-info/top_level.txt
+[6.628s] reading manifest file 'klaszterezes.egg-info/SOURCES.txt'
+[6.634s] writing manifest file 'klaszterezes.egg-info/SOURCES.txt'
+[6.660s] running build_ext
+[6.663s] Creating /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages/klaszterezes.egg-link (link to .)
+[6.678s] Installing lidar_subscriber script to /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/klaszterezes
+[6.695s] 
+[6.696s] Installed /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes
+[6.697s] running symlink_data
+[6.698s] symbolically linking /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/resource/klaszterezes -> /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/ament_index/resource_index/packages
+[6.699s] symbolically linking /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/package.xml -> /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes
+[6.701s] symbolically linking /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/launch/launch_example2.launch.py -> /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes
+[7.068s] Invoked command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes' returned '0': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data
