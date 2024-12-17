@@ -1,0 +1,70 @@
+[0.000000] (-) TimerEvent: {}
+[0.001053] (klaszterezes) JobQueued: {'identifier': 'klaszterezes', 'dependencies': OrderedDict()}
+[0.001412] (klaszterezes) JobStarted: {'identifier': 'klaszterezes'}
+[0.082131] (-) TimerEvent: {}
+[0.185508] (-) TimerEvent: {}
+[0.286086] (-) TimerEvent: {}
+[0.386608] (-) TimerEvent: {}
+[0.487233] (-) TimerEvent: {}
+[0.587820] (-) TimerEvent: {}
+[0.688414] (-) TimerEvent: {}
+[0.788989] (-) TimerEvent: {}
+[0.889794] (-) TimerEvent: {}
+[0.990367] (-) TimerEvent: {}
+[1.090821] (-) TimerEvent: {}
+[1.191387] (-) TimerEvent: {}
+[1.292740] (-) TimerEvent: {}
+[1.394327] (-) TimerEvent: {}
+[1.494888] (-) TimerEvent: {}
+[1.598688] (-) TimerEvent: {}
+[1.701618] (-) TimerEvent: {}
+[1.802162] (-) TimerEvent: {}
+[1.902813] (-) TimerEvent: {}
+[2.003363] (-) TimerEvent: {}
+[2.105083] (-) TimerEvent: {}
+[2.206384] (-) TimerEvent: {}
+[2.307266] (-) TimerEvent: {}
+[2.407878] (-) TimerEvent: {}
+[2.508545] (-) TimerEvent: {}
+[2.609081] (-) TimerEvent: {}
+[2.709642] (-) TimerEvent: {}
+[2.810420] (-) TimerEvent: {}
+[2.850743] (klaszterezes) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ajr', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{1716f17e-5e0b-5f1d-947c-76b03711f8a6}', 'HOME': '/home/ajr', 'OLDPWD': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/resource', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'ajr2', '_colcon_cd_root': '/opt/ros/humble/', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ajr', 'NAME': 'LAPTOP-SFHBR8J6', 'WSL_INTEROP': '/run/WSL/390_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '1', 'PATH': '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/ImageMagick-7.1.1-Q16-HDRI:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Users/adamk/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/adamk/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python 3.8:/mnt/c/Users/adamk/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python 3.8/Scripts:/mnt/c/Users/adamk/AppData/Local/Programs/Python/Python38-32/Scripts:/mnt/c/Users/adamk/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2023.3.3/bin:/mnt/c/Users/adamk/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/adamk/AppData/Roaming/npm:/mnt/c/Users/adamk/AppData/Local/GitHubDesktop/bin:/snap/bin', 'WT_SESSION': 'fd77be5b-4c29-4fde-9ab6-1a851e2f6625', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '73', 'AMENT_PREFIX_PATH': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes', 'RCUTILS_COLORIZED_OUTPUT': '1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[2.910533] (-) TimerEvent: {}
+[3.011140] (-) TimerEvent: {}
+[3.111754] (-) TimerEvent: {}
+[3.212792] (-) TimerEvent: {}
+[3.313372] (-) TimerEvent: {}
+[3.414073] (-) TimerEvent: {}
+[3.514899] (-) TimerEvent: {}
+[3.615688] (-) TimerEvent: {}
+[3.716576] (-) TimerEvent: {}
+[3.817412] (-) TimerEvent: {}
+[3.918051] (-) TimerEvent: {}
+[4.019035] (klaszterezes) StdoutLine: {'line': b'running develop\n'}
+[4.019819] (-) TimerEvent: {}
+[4.120263] (-) TimerEvent: {}
+[4.220938] (-) TimerEvent: {}
+[4.321728] (-) TimerEvent: {}
+[4.422518] (-) TimerEvent: {}
+[4.523329] (-) TimerEvent: {}
+[4.624078] (-) TimerEvent: {}
+[4.712400] (klaszterezes) StdoutLine: {'line': b'running egg_info\n'}
+[4.715124] (klaszterezes) StdoutLine: {'line': b'writing klaszterezes.egg-info/PKG-INFO\n'}
+[4.716524] (klaszterezes) StdoutLine: {'line': b'writing dependency_links to klaszterezes.egg-info/dependency_links.txt\n'}
+[4.719126] (klaszterezes) StdoutLine: {'line': b'writing entry points to klaszterezes.egg-info/entry_points.txt\n'}
+[4.721162] (klaszterezes) StdoutLine: {'line': b'writing requirements to klaszterezes.egg-info/requires.txt\n'}
+[4.723206] (klaszterezes) StdoutLine: {'line': b'writing top-level names to klaszterezes.egg-info/top_level.txt\n'}
+[4.724957] (-) TimerEvent: {}
+[4.731351] (klaszterezes) StdoutLine: {'line': b"reading manifest file 'klaszterezes.egg-info/SOURCES.txt'\n"}
+[4.735109] (klaszterezes) StdoutLine: {'line': b"writing manifest file 'klaszterezes.egg-info/SOURCES.txt'\n"}
+[4.745632] (klaszterezes) StdoutLine: {'line': b'running build_ext\n'}
+[4.748938] (klaszterezes) StdoutLine: {'line': b'Creating /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages/klaszterezes.egg-link (link to .)\n'}
+[4.753273] (klaszterezes) StdoutLine: {'line': b'Installing lidar_subscriber script to /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/klaszterezes\n'}
+[4.758726] (klaszterezes) StdoutLine: {'line': b'\n'}
+[4.759540] (klaszterezes) StdoutLine: {'line': b'Installed /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes\n'}
+[4.760654] (klaszterezes) StdoutLine: {'line': b'running symlink_data\n'}
+[4.825129] (-) TimerEvent: {}
+[4.861257] (klaszterezes) CommandEnded: {'returncode': 0}
+[4.903435] (klaszterezes) JobEnded: {'identifier': 'klaszterezes', 'rc': 0}
+[4.907487] (-) EventReactorShutdown: {}
