@@ -42,11 +42,17 @@ class LidarSubscriber(Node):
         # Loop through the Lidar data and separate mesurments by distance
         for i, pos in enumerate(msg.ranges):
             if pos != float('inf'):
-                line_average = (pos + line_average) / line_counter
-            if abs(pos-line_average) > 0.8 or pos == float('inf'):
+                line_average = (pos + line_average*(line_counter - 1)) / line_counter
+
+            if pos == float('inf'):
                 line_average = 0
-                lines.append(line_counter)
                 line_counter = 1
+            elif abs(pos-line_average) > 0.1:
+                line_average = 0
+                print(i)
+                lines.append(line_counter - 1)
+                line_counter = 1
+
             else:
                 line_counter += 1
             if abs(pos-last_pos) > 0.5 or pos == float('inf'):
@@ -66,54 +72,50 @@ class LidarSubscriber(Node):
         self.get_logger().info(f"Received Objects Data: {objects}")
         self.get_logger().info(f"Received Lines Data: {lines}")
 
+        line_start = True
+        line_x = 0
+        line_y = 0
+
+        line_counter = 1
+        lines_counter = 0
+
         
-        # Loop through the Lidar data and draw circles based on distances
+        # Loop through the Lidar data and draw circles and lines based on distances
         for i, distance in enumerate(msg.ranges):
             # If we have drawn the current cluster, move to the next one
             if object_counter < len(objects) and cluster_counter == objects[object_counter]:
                 color_counter = (color_counter + 1) % len(colors)  
                 object_counter += 1
                 cluster_counter = 0
+
+            if distance == float('inf'):
+                line_start = True
+
             
             if distance != float('inf'):
                 angle = msg.angle_min + i * self.angle_increment
+                if line_start:
+                    line_start = False
+                    line_x = center_x + distance * math.cos(angle) * 100
+                    line_y = center_y + distance * math.sin(angle) * 100
                 x = center_x + distance * math.cos(angle) * 100
                 y = center_y + distance * math.sin(angle) * 100
                 # Draw a small circle at the calculated position
                 self.canvas.create_oval(x-2, y-2, x+2, y+2, fill=colors[color_counter])
+                
+                # Draw the line
+                if (lines[lines_counter] == line_counter and lines_counter < len(lines)) or lines[lines_counter] == 0:
+                    if lines_counter < len(lines)-1:
+                        lines_counter += 1
+                    line_counter = 0
+                    self.canvas.create_line(line_x, line_y, x, y, width=3)
+                    line_start = True
 
+
+                line_counter += 1
                 cluster_counter += 1 
         
-        # Draw lines based on the 'lines' list
-        start_index = 0
-        for length in lines:
-            if length == 1:
-                start_index += 1
-                continue  # Skip lines with a length of 1
 
-            end_index = start_index + length - 1
-            if end_index >= len(msg.ranges):  # Avoid index errors
-                break
-
-            # Calculate the start and end positions
-            start_distance = msg.ranges[start_index]
-            end_distance = msg.ranges[end_index]
-            if start_distance == float('inf') or end_distance == float('inf'):
-                start_index = end_index + 1
-                continue
-
-            start_angle = msg.angle_min + start_index * self.angle_increment
-            end_angle = msg.angle_min + end_index * self.angle_increment
-
-            start_x = center_x + start_distance * math.cos(start_angle) * 100
-            start_y = center_y + start_distance * math.sin(start_angle) * 100
-            end_x = center_x + end_distance * math.cos(end_angle) * 100
-            end_y = center_y + end_distance * math.sin(end_angle) * 100
-
-            # Draw the line
-            self.canvas.create_line(start_x, start_y, end_x, end_y, fill="black", width=2)
-
-            start_index = end_index + 1
 
         self.get_logger().info(f"Received Lidar Data: {msg.ranges}")
 
