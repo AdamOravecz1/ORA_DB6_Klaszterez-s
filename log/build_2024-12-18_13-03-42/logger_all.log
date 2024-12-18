@@ -1,0 +1,96 @@
+[1.342s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[1.343s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fc95ab35e10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fc95ab35960>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fc95ab35960>>, mixin_verb=('build',))
+[2.375s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.383s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s'
+[2.383s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.528s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'klaszterezes'
+[2.528s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.530s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.530s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.530s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.646s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.647s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.658s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install
+[2.672s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 353 installed packages in /opt/ros/humble
+[2.681s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.138s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'cmake_args' from command line to 'None'
+[3.138s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'cmake_target' from command line to 'None'
+[3.138s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.139s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'cmake_clean_cache' from command line to 'False'
+[3.139s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'cmake_clean_first' from command line to 'False'
+[3.139s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'cmake_force_configure' from command line to 'False'
+[3.139s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'ament_cmake_args' from command line to 'None'
+[3.139s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'catkin_cmake_args' from command line to 'None'
+[3.139s] Level 5:colcon.colcon_core.verb:set package 'klaszterezes' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.139s] DEBUG:colcon.colcon_core.verb:Building package 'klaszterezes' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes', 'merge_install': False, 'path': '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s', 'symlink_install': True, 'test_result_base': None}
+[3.140s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.145s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.146s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s' with build type 'ament_python'
+[3.147s] Level 1:colcon.colcon_core.shell:create_environment_hook('klaszterezes', 'ament_prefix_path')
+[3.170s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.173s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/hook/ament_prefix_path.ps1'
+[3.185s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/hook/ament_prefix_path.dsv'
+[3.197s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/hook/ament_prefix_path.sh'
+[3.203s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.204s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.777s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s'
+[4.778s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.778s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.642s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data
+[9.056s] Level 1:colcon.colcon_core.shell:create_environment_hook('klaszterezes', 'pythonpath_develop')
+[9.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/share/klaszterezes/hook/pythonpath_develop.ps1'
+[9.059s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes' returned '0': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data
+[9.060s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/share/klaszterezes/hook/pythonpath_develop.dsv'
+[9.062s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/share/klaszterezes/hook/pythonpath_develop.sh'
+[9.086s] Level 1:colcon.colcon_core.environment:checking '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes' for CMake module files
+[9.093s] Level 1:colcon.colcon_core.environment:checking '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes' for CMake config files
+[9.097s] Level 1:colcon.colcon_core.environment:checking '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib'
+[9.098s] Level 1:colcon.colcon_core.environment:checking '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/bin'
+[9.099s] Level 1:colcon.colcon_core.environment:checking '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/pkgconfig/klaszterezes.pc'
+[9.099s] Level 1:colcon.colcon_core.environment:checking '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages'
+[9.100s] Level 1:colcon.colcon_core.shell:create_environment_hook('klaszterezes', 'pythonpath')
+[9.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/hook/pythonpath.ps1'
+[9.114s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/hook/pythonpath.dsv'
+[9.116s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/hook/pythonpath.sh'
+[9.118s] Level 1:colcon.colcon_core.environment:checking '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/bin'
+[9.119s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(klaszterezes)
+[9.120s] INFO:colcon.colcon_core.shell:Creating package script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/package.ps1'
+[9.135s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/package.dsv'
+[9.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/package.sh'
+[9.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/package.bash'
+[9.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/klaszterezes/package.zsh'
+[9.160s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/share/colcon-core/packages/klaszterezes)
+[9.168s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.171s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.172s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.172s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.496s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[9.497s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.497s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.498s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.505s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[9.506s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.508s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/local_setup.ps1'
+[9.513s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/_local_setup_util_ps1.py'
+[9.522s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/setup.ps1'
+[9.535s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/local_setup.sh'
+[9.537s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/_local_setup_util_sh.py'
+[9.540s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/setup.sh'
+[9.546s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/local_setup.bash'
+[9.549s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/setup.bash'
+[9.556s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/local_setup.zsh'
+[9.558s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/setup.zsh'

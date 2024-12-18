@@ -28,29 +28,43 @@ class LidarSubscriber(Node):
         self.canvas.delete("all") 
         colors = ["blue", "red", "green", "yellow", "black", "white", "purple", "orange"]
         color_counter = 0
-        center_x, center_y = 400, 300
+        center_x, center_y = 400, 400
         objects = []
         object_counter = 0
         cluster_counter = 0
         last_pos = 0
         counter = 1
 
+        lines = []
+        line_counter = 1
+        line_average = 0
+
         # Loop through the Lidar data and separate mesurments by distance
-        for mes in msg.ranges:
-            if abs(mes-last_pos) > 0.5 or mes == float('inf') :
+        for i, pos in enumerate(msg.ranges):
+            if pos != float('inf'):
+                line_average = (pos + line_average) / line_counter
+            if abs(pos-line_average) > 0.8 or pos == float('inf'):
+                line_average = 0
+                lines.append(line_counter)
+                line_counter = 1
+            else:
+                line_counter += 1
+            if abs(pos-last_pos) > 0.5 or pos == float('inf'):
                 objects.append(counter)
                 counter = 1
             else:
                 counter += 1
             
-            if mes == float('inf'):
+            if pos == float('inf'):
                 last_pos = 0
             else:
-                last_pos = mes
+                last_pos = pos
 
-        # Remove Zeros from objects
+
+        # Remove Ones from objects
         objects = [obj for obj in objects if obj != 1]
         self.get_logger().info(f"Received Objects Data: {objects}")
+        self.get_logger().info(f"Received Lines Data: {lines}")
 
         
         # Loop through the Lidar data and draw circles based on distances
@@ -67,7 +81,39 @@ class LidarSubscriber(Node):
                 y = center_y + distance * math.sin(angle) * 100
                 # Draw a small circle at the calculated position
                 self.canvas.create_oval(x-2, y-2, x+2, y+2, fill=colors[color_counter])
+
                 cluster_counter += 1 
+        
+        # Draw lines based on the 'lines' list
+        start_index = 0
+        for length in lines:
+            if length == 1:
+                start_index += 1
+                continue  # Skip lines with a length of 1
+
+            end_index = start_index + length - 1
+            if end_index >= len(msg.ranges):  # Avoid index errors
+                break
+
+            # Calculate the start and end positions
+            start_distance = msg.ranges[start_index]
+            end_distance = msg.ranges[end_index]
+            if start_distance == float('inf') or end_distance == float('inf'):
+                start_index = end_index + 1
+                continue
+
+            start_angle = msg.angle_min + start_index * self.angle_increment
+            end_angle = msg.angle_min + end_index * self.angle_increment
+
+            start_x = center_x + start_distance * math.cos(start_angle) * 100
+            start_y = center_y + start_distance * math.sin(start_angle) * 100
+            end_x = center_x + end_distance * math.cos(end_angle) * 100
+            end_y = center_y + end_distance * math.sin(end_angle) * 100
+
+            # Draw the line
+            self.canvas.create_line(start_x, start_y, end_x, end_y, fill="black", width=2)
+
+            start_index = end_index + 1
 
         self.get_logger().info(f"Received Lidar Data: {msg.ranges}")
 
@@ -80,7 +126,7 @@ def main(args=None):
 
     # Tkinter window and canvas setup
     root = tkinter.Tk()
-    canvas = tkinter.Canvas(root, width=800, height=600)
+    canvas = tkinter.Canvas(root, width=800, height=800)
     canvas.pack()
 
     # Initialize ROS 2 node and pass the canvas to the subscriber
