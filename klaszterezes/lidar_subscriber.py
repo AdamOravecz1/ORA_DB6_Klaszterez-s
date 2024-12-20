@@ -36,25 +36,33 @@ class LidarSubscriber(Node):
         counter = 1
 
         lines = []
-        line_counter = 1
+        line_counter = 0
         line_average = 0
 
         # Loop through the Lidar data and separate mesurments by distance
         for i, pos in enumerate(msg.ranges):
-            if pos != float('inf'):
-                line_average = (pos + line_average*(line_counter - 1)) / line_counter
-
             if pos == float('inf'):
+                # Append 1 for infinite values and reset counters
+                if line_counter > 0:
+                    lines.append(line_counter)  # Append the length of the current line
+                lines.append(1)  # Append 1 for the infinite value
                 line_average = 0
-                line_counter = 1
-            elif abs(pos-line_average) > 0.1:
-                line_average = 0
-                print(i)
-                lines.append(line_counter - 1)
-                line_counter = 1
-
+                line_counter = 0
             else:
-                line_counter += 1
+                # Update line average and counter for valid values
+                if line_counter == 0:
+                    line_average = pos
+                else:
+                    line_average = (pos + line_average * line_counter) / (line_counter + 1)
+                
+                # Check if the point is part of the current line
+                if abs(pos - line_average) > 0.15:
+                    lines.append(line_counter)  # Append the length of the current line
+                    line_average = pos  # Start a new line
+                    line_counter = 1
+                else:
+                    line_counter += 1
+
             if abs(pos-last_pos) > 0.5 or pos == float('inf'):
                 objects.append(counter)
                 counter = 1
@@ -66,11 +74,19 @@ class LidarSubscriber(Node):
             else:
                 last_pos = pos
 
+        # Append the final line length if there are remaining points
+        if line_counter > 0:
+            lines.append(line_counter)
+
 
         # Remove Ones from objects
         objects = [obj for obj in objects if obj != 1]
         self.get_logger().info(f"Received Objects Data: {objects}")
         self.get_logger().info(f"Received Lines Data: {lines}")
+        ossz = 0
+        for i in lines:
+            ossz += i
+        print(ossz)
 
         line_start = True
         line_x = 0
@@ -90,6 +106,8 @@ class LidarSubscriber(Node):
 
             if distance == float('inf'):
                 line_start = True
+                if lines_counter < len(lines)-1:
+                    lines_counter += 1
 
             
             if distance != float('inf'):
@@ -104,13 +122,17 @@ class LidarSubscriber(Node):
                 self.canvas.create_oval(x-2, y-2, x+2, y+2, fill=colors[color_counter])
                 
                 # Draw the line
-                if (lines[lines_counter] == line_counter and lines_counter < len(lines)) or lines[lines_counter] == 0:
+                if lines[lines_counter] <= 1:
+                    if lines_counter < len(lines)-1:
+                        lines_counter += 1
+                    line_start = True
+                    line_counter = 0
+                elif (lines[lines_counter] == line_counter and lines_counter < len(lines)):
                     if lines_counter < len(lines)-1:
                         lines_counter += 1
                     line_counter = 0
                     self.canvas.create_line(line_x, line_y, x, y, width=3)
                     line_start = True
-
 
                 line_counter += 1
                 cluster_counter += 1 
@@ -118,6 +140,7 @@ class LidarSubscriber(Node):
 
 
         self.get_logger().info(f"Received Lidar Data: {msg.ranges}")
+        print(len(msg.ranges))
 
 def ros_spin():
     rclpy.spin(node)

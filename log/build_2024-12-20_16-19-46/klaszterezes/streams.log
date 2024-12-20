@@ -1,0 +1,17 @@
+[2.139s] Invoking command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data
+[3.005s] running develop
+[3.543s] running egg_info
+[3.545s] writing klaszterezes.egg-info/PKG-INFO
+[3.550s] writing dependency_links to klaszterezes.egg-info/dependency_links.txt
+[3.551s] writing entry points to klaszterezes.egg-info/entry_points.txt
+[3.553s] writing requirements to klaszterezes.egg-info/requires.txt
+[3.555s] writing top-level names to klaszterezes.egg-info/top_level.txt
+[3.563s] reading manifest file 'klaszterezes.egg-info/SOURCES.txt'
+[3.569s] writing manifest file 'klaszterezes.egg-info/SOURCES.txt'
+[3.574s] running build_ext
+[3.574s] Creating /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages/klaszterezes.egg-link (link to .)
+[3.576s] Installing lidar_subscriber script to /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/klaszterezes
+[3.577s] 
+[3.578s] Installed /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes
+[3.578s] running symlink_data
+[3.684s] Invoked command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes' returned '0': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data
