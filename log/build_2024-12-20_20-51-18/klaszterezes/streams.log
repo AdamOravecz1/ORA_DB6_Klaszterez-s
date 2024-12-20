@@ -1,0 +1,18 @@
+[1.164s] Invoking command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data
+[1.601s] running develop
+[1.905s] running egg_info
+[1.906s] writing klaszterezes.egg-info/PKG-INFO
+[1.906s] writing dependency_links to klaszterezes.egg-info/dependency_links.txt
+[1.907s] writing entry points to klaszterezes.egg-info/entry_points.txt
+[1.907s] writing requirements to klaszterezes.egg-info/requires.txt
+[1.908s] writing top-level names to klaszterezes.egg-info/top_level.txt
+[1.910s] reading manifest file 'klaszterezes.egg-info/SOURCES.txt'
+[1.911s] writing manifest file 'klaszterezes.egg-info/SOURCES.txt'
+[1.912s] running build_ext
+[1.913s] Creating /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages/klaszterezes.egg-link (link to .)
+[1.914s] Installing lidar_subscriber script to /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/klaszterezes
+[1.914s] 
+[1.914s] Installed /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes
+[1.915s] running symlink_data
+[1.915s] error: can't copy '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/launch/launch_example2.launch.py': doesn't exist or not a regular file
+[1.958s] Invoked command in '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes' returned '1': PYTHONPATH=/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/build --no-deps symlink_data

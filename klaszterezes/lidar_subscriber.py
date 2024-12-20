@@ -6,6 +6,8 @@ import threading
 import math
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
+from std_msgs.msg import Int32MultiArray
+from std_msgs.msg import Float32MultiArray
 
 
 class LidarSubscriber(Node):
@@ -13,6 +15,12 @@ class LidarSubscriber(Node):
         super().__init__('lidar_subscriber')
         self.canvas = canvas  # Tkinter canvas to draw on
         self.angle_increment = None  # To store the angle increment from Lidar
+
+        # Publishers for objects, lines, and ranges
+        self.objects_publisher = self.create_publisher(Int32MultiArray, '/lidar_objects', 10)
+        self.lines_publisher = self.create_publisher(Int32MultiArray, '/lidar_lines', 10)
+        self.ranges_publisher = self.create_publisher(Float32MultiArray, '/lidar_ranges', 10)
+
         # Subscribe to /scan topic
         self.subscription = self.create_subscription(
             LaserScan,
@@ -81,13 +89,22 @@ class LidarSubscriber(Node):
 
         # Remove Ones from objects
         objects = [obj for obj in objects if obj != 1]
-        self.get_logger().info(f"Received Objects Data: {objects}")
-        self.get_logger().info(f"Received Lines Data: {lines}")
-        ossz = 0
-        for i in lines:
-            ossz += i
-        print(ossz)
 
+        # Publish objects, lines, and ranges
+        objects_msg = Int32MultiArray(data=objects)
+        self.objects_publisher.publish(objects_msg)
+
+        lines_msg = Int32MultiArray(data=lines)
+        self.lines_publisher.publish(lines_msg)
+
+        ranges_msg = Float32MultiArray(data=msg.ranges)
+        self.ranges_publisher.publish(ranges_msg)
+
+        self.get_logger().info(f"Published Objects: {objects}")
+        self.get_logger().info(f"Published Lines: {lines}")
+        self.get_logger().info(f"Published Ranges: {msg.ranges}")
+
+        # Visualisation
         line_start = True
         line_x = 0
         line_y = 0
@@ -137,10 +154,6 @@ class LidarSubscriber(Node):
                 line_counter += 1
                 cluster_counter += 1 
         
-
-
-        self.get_logger().info(f"Received Lidar Data: {msg.ranges}")
-        print(len(msg.ranges))
 
 def ros_spin():
     rclpy.spin(node)

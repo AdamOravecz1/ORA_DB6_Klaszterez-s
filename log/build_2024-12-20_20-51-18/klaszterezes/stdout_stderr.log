@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing klaszterezes.egg-info/PKG-INFO
+writing dependency_links to klaszterezes.egg-info/dependency_links.txt
+writing entry points to klaszterezes.egg-info/entry_points.txt
+writing requirements to klaszterezes.egg-info/requires.txt
+writing top-level names to klaszterezes.egg-info/top_level.txt
+reading manifest file 'klaszterezes.egg-info/SOURCES.txt'
+writing manifest file 'klaszterezes.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/python3.10/site-packages/klaszterezes.egg-link (link to .)
+Installing lidar_subscriber script to /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/install/klaszterezes/lib/klaszterezes
+
+Installed /home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes
+running symlink_data
+error: can't copy '/home/ajr/ros2_ws/src/ORA_DB6_Klaszterez-s/build/klaszterezes/launch/launch_example2.launch.py': doesn't exist or not a regular file
