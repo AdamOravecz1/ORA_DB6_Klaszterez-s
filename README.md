@@ -1,59 +1,82 @@
-# `klaszterezes` package
-ROS 2 python package.  [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
-## Packages and build
+# `klaszterezes` csomag
+ROS 2 Python csomag Lidar adatok klaszterezésére és vizualizációjára.  
+[![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
 
-It is assumed that the workspace is `~/ros2_ws/`.
+## Áttekintés
+A `klaszterezes` csomag a `/scan` topikból származó Lidar adatokat dolgozza fel, azonosítja a klasztereket (objektumokat) és vonalakat, majd megjeleníti az eredményeket egy Tkinter-alapú grafikus felületen. Emellett a detektált objektumokat, vonalakat és a feldolgozott Lidar távolságokat külön ROS 2 topikokra publikálja további feldolgozás céljából.
 
-### Clone the packages
-``` r
+### Funkciók
+- **Klaszterek detektálása**: A Lidar pontokat közelség alapján csoportosítja.
+- **Vonalak detektálása**: A Lidar adatokból folytonos szegmenseket (vonalakat) azonosít.
+- **Vizualizáció**: A Tkinter vásznon megjeleníti a Lidar pontokat, klasztereket és vonalakat.
+- **ROS 2 topikok**: A feldolgozott adatokat az alábbi topikokra publikálja:
+  - `/lidar_objects` (klaszterek)
+  - `/lidar_lines` (vonal szegmensek)
+  - `/lidar_ranges` (feldolgozott Lidar távolságok).
+
+---
+
+## Telepítés és build
+
+Feltételezzük, hogy a munkakönyvtárad `~/ros2_ws/`.
+
+### A csomag klónozása
+```bash
 cd ~/ros2_ws/src
-```
-``` r
-git clone https://github.com/adam oravecz/klaszterezes
-```
+git clone https://github.com/adamoravecz/klaszterezes
 
-### Build ROS 2 packages
-``` r
+A csomag buildelése
+
 cd ~/ros2_ws
-```
-``` r
 colcon build --packages-select klaszterezes --symlink-install
-```
 
-<details>
-<summary> Don't forget to source before ROS commands.</summary>
+<details> <summary>Ne felejtsd el a ROS környezetet forrásolni a parancsok előtt!</summary>
 
-``` bash
 source ~/ros2_ws/install/setup.bash
-```
+
 </details>
+Használat
+A csomag indítása
 
-``` r
+A klaszterezes csomagot az alábbi launch fájl segítségével indíthatod:
+
 ros2 launch klaszterezes launch_example1.launch.py
-```
 
-# Delete this part if you are using it as a template
+Feliratkozott topikok
 
-ROS 2 pacage template, to get started, use template by clicking on the Green button labeled [`Use this template`](https://github.com/adam oravecz/klaszterezes/generate) / [`Create new repository`](https://github.com/adam oravecz/klaszterezes/generate). 
+    /scan (sensor_msgs/msg/LaserScan): Lidar szkennelési adatok.
 
-<p align="center"><img src="img/use_this_template01.png" width="60%" /></p>
+Publikált topikok
 
+    /lidar_objects (std_msgs/msg/Int32MultiArray): Klaszterek méreteinek listája.
+    /lidar_lines (std_msgs/msg/Int32MultiArray): Vonal szegmensek hosszainak listája.
+    /lidar_ranges (std_msgs/msg/Float32MultiArray): Feldolgozott Lidar távolságok.
 
-Let's assume 
-- your Github username is `mycoolusername`
-- your ROS 2 repo shold be `cool_ros2_package`
+Vizualizáció
 
-Replace everything in the cloned repo:
+A csomag futtatása közben egy Tkinter ablak jelenik meg, amely az alábbiakat mutatja:
 
-- `klaszterezes` >> `cool_ros2_package` (the folder was already renamed after `Use this template`)
-- `adam oravecz` >> `mycoolusername`
-- find all `todo` strings and fill the blanks
+    Pontok: A Lidar szkennelési pontokat jeleníti meg, klaszterek szerint színezve.
+    Vonalak: A Lidar adatokból detektált folytonos szegmenseket (vonalakat) rajzolja ki.
 
-The easiest way is VS code:
+Tesztelés
 
-<p align="center"><img src="img/replace01.png" width="90%" /></p>
+A csomag teszteléséhez a turtlesim csomagot használtuk, amely egy Lidar-szerű környezetet szimulál. A következő lépésekkel tesztelheted a csomagot:
+Turtlesim telepítése
 
-> [!IMPORTANT]  
-> Don't forget to rename the directory (folder) and the file too.
+sudo apt install ros-humble-turtlesim
 
-Now `colcon build` your ROS 2 package and you can start wokring.
+Turtlesim indítása
+
+ros2 run turtlesim turtlesim_node
+
+Lidar szimuláció futtatása
+
+Publikálj dummy Lidar adatokat a /scan topikra egy szkripttel vagy más ROS 2 csomaggal, majd figyeld meg az eredményeket a Tkinter ablakban.
+Publikált topikok ellenőrzése
+
+Ellenőrizheted a feldolgozott adatokat az alábbi parancsokkal:
+
+ros2 topic echo /lidar_objects
+ros2 topic echo /lidar_lines
+ros2 topic echo /lidar_ranges
