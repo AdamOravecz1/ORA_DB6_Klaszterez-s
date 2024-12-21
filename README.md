@@ -71,14 +71,12 @@ A csomag futtatása közben egy Tkinter ablak jelenik meg, amely az alábbiakat 
 
 Az alábbi képen bal oldalon látható a Lidar adatgyűjtés, míg jobb oldalon a klaszterezés eredményének vizualizációja.
 
-<p align="center">
-  <img src="img/klaszterezes_vizualizacio.png" alt="Lidar adatgyűjtés és vizualizáció" width="80%">
-</p>
+![](img/klaszter_vizual.png)
 
 ---
 
 ## Tesztelés
-A csomag teszteléséhez a [turtlesim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim.html) csomagot használtam, amely egy Lidar-szerű környezetet szimulál. A következő lépésekkel tesztelhető a csomag:
+A csomag teszteléséhez a turtlesim csomagot használtam, amely egy Lidar-szerű környezetet szimulál. A következő lépésekkel tesztelhető a csomag:
 
 ### Turtlesim telepítése
 ```bash
