@@ -47,7 +47,7 @@ source ~/ros2_ws/install/setup.bash
 ### A csomag indítása
 A `klaszterezes` csomagot az alábbi launch fájl segítségével indítható:
 ```bash
-ros2 launch klaszterezes launch_example1.launch.py
+ros2 launch klaszterezes lidar_subscriber
 ```
 
 ### Feliratkozott topikok
@@ -64,6 +64,16 @@ ros2 launch klaszterezes launch_example1.launch.py
 A csomag futtatása közben egy Tkinter ablak jelenik meg, amely az alábbiakat mutatja:
 - **Pontok**: A Lidar szkennelési pontokat jeleníti meg, klaszterek szerint színezve.
 - **Vonalak**: A Lidar adatokból detektált folytonos szegmenseket (vonalakat) rajzolja ki.
+
+---
+
+### Lidar adatgyűjtés és vizualizáció
+
+Az alábbi képen bal oldalon látható a Lidar adatgyűjtés, míg jobb oldalon a klaszterezés eredményének vizualizációja.
+
+<p align="center">
+  <img src="img/klaszterezes_vizualizacio.png" alt="Lidar adatgyűjtés és vizualizáció" width="80%">
+</p>
 
 ---
 
