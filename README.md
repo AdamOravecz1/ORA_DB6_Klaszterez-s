@@ -25,8 +25,8 @@ Feltételezzük, hogy a munkakönyvtárad `~/ros2_ws/`.
 cd ~/ros2_ws/src
 git clone https://github.com/adamoravecz/klaszterezes
 
-A csomag buildelése
-
+### A csomag buildelése
+```bash
 cd ~/ros2_ws
 colcon build --packages-select klaszterezes --symlink-install
 
